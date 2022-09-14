@@ -38,4 +38,8 @@ function displayHistory() {
     histories.appendChild(newRow);
   });
 }
-console.log('history js added')
+
+
+
+
+

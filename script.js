@@ -12,12 +12,15 @@ let startTime;
 let questionText = "";
 
 // Load and display question
+
 fetch("./texts.json")
   .then((res) => res.json())
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
     question.innerHTML = questionText;
+    console.log();
   });
+
 
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
@@ -107,7 +110,7 @@ const start = () => {
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = '<h1>${count}</h1>';
+    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
     // finished timer
     if (count == 0) {
